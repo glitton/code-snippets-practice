@@ -15,17 +15,6 @@ highestValue("az"); //26
 highestValue("chruschtschov"); //80
 highestValue("twelfthstreet"); // 103;
 
-/* Sort Odds 
-https://www.codewars.com/kata/578aa45ee9fd15ff4600090d/train/javascript
-
-Given an array of numbers, sort the odd numbers in ascending order while leaving the even numbers at their original positions.
-
-sortOdds([5, 3, 2, 8, 1, 4]) // [1, 3, 2, 8, 5, 4];
-sortOdds([5, 3, 1, 8, 0]) // [1, 3, 5, 8, 0];
-sortOdds([]) //[];
-
-*/
-
 /* Palindromes 
 https://www.codewars.com/kata/5a1560c980171f3f68000037/train/javascript
 Given a string, we'd like to know whether the vowels, consonants or both (assessed separately) are the same backwards as they are forwards. See examples at the bottom of this description.
