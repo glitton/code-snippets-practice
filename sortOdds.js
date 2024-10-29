@@ -34,26 +34,47 @@ a:
   ---- replace the current number with the current number oddArr, reassign the current number of oddArr with sorted odd number 
   - return copyArr
 */
+//aziza
+// function sortOdds(array) {
+//   if (array.length === 0) return [];
+//   let oddArr = [];
+
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] % 2 === 1) {
+//       oddArr.push(array[i]);
+//     }
+//   }
+//   oddArr.sort((a, b) => a - b);
+
+//   let copyArr = array.slice();
+
+//   for (let i = 0; i <= copyArr.length; i += 1) {
+//     if (copyArr[i] % 2 === 1) {
+//       copyArr[i] = oddArr.shift();
+//     }
+//   }
+//   return copyArr;
+// }
 
 function sortOdds(array) {
   if (array.length === 0) return [];
-  let oddArr = [];
 
-  for (let i = 0; i < array.length; i += 1) {
-    if (array[i] % 2 === 1) {
-      oddArr.push(array[i]);
+  let oddArray = [];
+
+  for (let idx = 0; idx < array.length; idx++) {
+    if (array[idx] % 2 === 1) {
+      oddArray.push(array[idx]);
     }
   }
-  oddArr.sort((a, b) => a - b);
+  oddArray.sort((a, b) => a - b);
 
-  let copyArr = array.slice();
-
-  for (let i = 0; i <= copyArr.length; i += 1) {
-    if (copyArr[i] % 2 === 1) {
-      copyArr[i] = oddArr.shift();
+  let arrayCopy = array.slice();
+  for (let idx = 0; idx < arrayCopy.length; idx++) {
+    if (arrayCopy[idx] % 2 === 1) {
+      array[idx] = oddArray.shift();
     }
   }
-  return copyArr;
+  return arrayCopy;
 }
 
 console.log(sortOdds([5, 3, 2, 8, 1, 4])); // [1, 3, 2, 8, 5, 4];

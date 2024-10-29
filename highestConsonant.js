@@ -15,6 +15,8 @@ rules:
   - the value of each letter is a number 
 d:
 - object: to store each letter with its number 
+- string variable to create substrings
+- array to store substrings
 
 a:
 - iterate through the input string 
@@ -22,9 +24,14 @@ a:
 
   - intialize sum to 0
   - intialize ALPHA_VALUES to an object that holds the alphabetic characters and their numbers 
-  - iterate through the input string 
-  -- if the current letter is a consonant and includes within the ALPHA_VALUES 
-  --- get the value of this key 
+  - initialize a substring variable, set it to empty string
+  - initialize an empty array to store substrings
+  - iterate through the input string
+  --  if the current letter is a consonant append it to the substring, 
+        -- repeat until next value is a vowel
+        -- append substring to substringArray
+  - Once array is populated, iterate through each substring      
+  --- get the value of each character in the substring using the object key 
   --- add the result to sum 
   - return sum 
 
@@ -59,10 +66,39 @@ const ALPHA_VALUES = {
   z: 26,
 };
 
-function highestValue(string) {}
+const VOWELS = "aeiou";
 
+function highestValue(string) {
+  let sum = 0;
+  let subString = "";
+  let subStringArray = [];
+
+  for (let idx = 0; idx < string.length; idx++) {
+    for(let j=1;j<string.length)
+  }
+  console.log(subStringArray);
+}
+
+/*
+a:
+- iterate through the input string 
+- get the highest number of consonant substrings 
+
+  - intialize sum to 0
+  - intialize ALPHA_VALUES to an object that holds the alphabetic characters and their numbers 
+  - initialize a substring variable, set it to empty string
+  - initialize an empty array to store substrings
+  - iterate through the input string
+  --  if the current letter is a consonant append it to the substring, 
+        -- repeat until next value is a vowel
+        -- append substring to substringArray
+  - Once array is populated, iterate through each substring      
+  --- get the value of each character in the substring using the object key 
+  --- add the result to sum 
+  - return sum 
+*/
 highestValue("zodiac"); //26
-highestValue("strength"); //57
-highestValue("az"); //26
-highestValue("chruschtschov"); //80
-highestValue("twelfthstreet"); // 103;
+// highestValue("strength"); //57
+// highestValue("az"); //26
+// highestValue("chruschtschov"); //80
+// highestValue("twelfthstreet"); // 103;
