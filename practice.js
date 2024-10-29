@@ -55,3 +55,13 @@ palindrome(" *73_ ab"); // "both"
 palindrome("3-B0oto b"); // "both"
 palindrome("_inte 4"); // "neither"
 palindrome("neither"); // "vowel"
+
+//Consider these
+/*
+https://www.codewars.com/kata/5777fe3f355edbf0a5000d11
+https://www.codewars.com/kata/5b180e9fedaa564a7000009a
+https://www.codewars.com/kata/5831c5f8ac6a11e3380002de
+Vowel Code: https://www.codewars.com/kata/53697be005f803751e0015aa
+
+
+*/
