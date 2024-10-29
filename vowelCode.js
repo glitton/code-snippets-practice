@@ -1,12 +1,6 @@
-const VOWELS = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5,
-};
+const VOWELS = { a: 1, e: 2, i: 3, o: 4, u: 5 };
 
-function encode(string) {
+function encodeOG(string) {
   let encodedString = "";
   for (let idx = 0; idx < string.length; idx++) {
     if (VOWELS.hasOwnProperty(string[idx])) {
@@ -18,7 +12,7 @@ function encode(string) {
   return encodedString;
 }
 
-function decode(string) {
+function decodeOG(string) {
   let decodedString = "";
   let stringArray = string.split("");
   stringArray.map((char, idx) => {
@@ -28,6 +22,12 @@ function decode(string) {
 
     // }
   });
+}
+
+const VOWELS_ARRAY = ["a", "e", "i", "o", "u"];
+
+function encode(string) {
+  let encodedString = "";
 }
 
 // console.log(encode("hello")); //"h2ll4";
