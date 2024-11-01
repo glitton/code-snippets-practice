@@ -28,25 +28,46 @@ A:
   - return finalWords in string format using join(' ')
 */
 
+// function reverseFiveLetters(words) {
+//   let wordsArray = words.split(" ");
+//   let finalWords = [];
+
+//   for (let word of wordsArray) {
+//     if (word.length >= 5) {
+//       finalWords.push(reverse(word));
+//     } else {
+//       finalWords.push(word);
+//     }
+//   }
+//   return finalWords.join(" ");
+// }
+
+// function reverse(word) {
+//   let reverseWord = word.split("");
+//   return reverseWord.reverse().join("");
+// }
+
+// function reverseFiveLetters(words) {
+//   return words
+//     .split(" ")
+//     .map((word) => {
+//       if (word.length >= 5) {
+//         return word.split("").reverse().join("");
+//       } else {
+//         return word;
+//       }
+//     })
+//     .join(" ");
+// }
+
 function reverseFiveLetters(words) {
-  let wordsArray = words.split(" ");
-  let finalWords = [];
-
-  for (let word of wordsArray) {
-    if (word.length >= 5) {
-      finalWords.push(reverse(word));
-    } else {
-      finalWords.push(word);
-    }
-  }
-  return finalWords.join(" ");
+  return words
+    .split(" ")
+    .map((word) =>
+      word.length >= 5 ? word.split("").reverse().join("") : word
+    )
+    .join(" ");
 }
-
-function reverse(word) {
-  let reverseWord = word.split("");
-  return reverseWord.reverse().join("");
-}
-
 console.log(reverseFiveLetters("Hey fellow warriors")); //--> "Hey wollef sroirraw"
 console.log(reverseFiveLetters("This is a test")); //--> "This is a test"
 console.log(reverseFiveLetters("This is another test")); //--> "This is rehtona test"
