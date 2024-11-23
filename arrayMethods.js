@@ -213,4 +213,42 @@ function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((acc, curr) => acc + curr, 0);
 }
 
-console.log(arrayPlusArray([1, 2, 3], [4, 5, 6])); // 21
+// console.log(arrayPlusArray([1, 2, 3], [4, 5, 6])); // 21
+
+//13.  Smallest value in an array.  Write a function that can return the smallest value of an array or the index of that value. The function's 2nd parameter will tell whether it should return the value or the index.
+
+// function smallestValue(arr, toReturn) {
+//   if (toReturn === "value") {
+//     return arr.sort((a, b) => a - b)[0];
+//   }
+
+//   if (toReturn === "index") {
+//     let smallestIndex = 0;
+//     for (let i = 0; i <= arr.length; i += 1) {
+//       if (arr[i] < arr[smallestIndex]) {
+//         smallestIndex = i;
+//       }
+//     }
+//     return smallestIndex;
+//   }
+// }
+
+function smallestValue(arr, toReturn) {
+  let minValue = Math.min(...arr); // take elements of arr and pass them as distinct arguments
+
+  return toReturn === "index" ? arr.indexOf(minValue) : minValue;
+}
+
+/*
+If toReturn is equal to value, sort the array and return the first element
+If toReturn is equal to index, iterate over the array, create a temp variable, smallest 
+  - compare elements in the array,
+  - assign smaller value element to smallest until the end of the array is reached
+  - return the index of the value of smallest (indexOf?)
+*/
+
+console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "value")); // 230
+console.log(smallestValue([750, 50000, 10, 50], "value")); // 10
+console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "index")); // 5
+console.log(smallestValue([1, 2, 3, 4, 5], "value")); // 1
+console.log(smallestValue([1, 2, 3, 4, 5], "index")); // 0
