@@ -269,9 +269,35 @@ A:
 */
 
 function sortByLength(array) {
-  // Return an array containing the same strings,
-  // ordered from shortest to longest
-  return [];
+  return array.sort((a, b) => a.length - b.length);
 }
 
-console.log(sortByLength(["Beg", "Life", "I", "To"]));
+// console.log(sortByLength(["Beg", "Life", "I", "To"]));
+
+//16.  Check if array includes a value
+
+function check(arr, value) {
+  return arr.includes(value);
+}
+
+// console.log(check([66, 101], 66));
+
+//17. square every digit of a number and concatenate them.
+//For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+// Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+
+// Note: The function accepts an integer and returns an integer.
+
+function squareDigits(num) {
+  let result = "";
+  let stringNum = String(num);
+
+  for (let idx = 0; idx < stringNum.length; idx++) {
+    squareNum = Number(stringNum[idx]) * Number(stringNum[idx]);
+    result += String(squareNum);
+  }
+  return Number(result);
+}
+
+console.log(squareDigits(3212)); //9414
