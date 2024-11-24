@@ -247,8 +247,31 @@ If toReturn is equal to index, iterate over the array, create a temp variable, s
   - return the index of the value of smallest (indexOf?)
 */
 
-console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "value")); // 230
-console.log(smallestValue([750, 50000, 10, 50], "value")); // 10
-console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "index")); // 5
-console.log(smallestValue([1, 2, 3, 4, 5], "value")); // 1
-console.log(smallestValue([1, 2, 3, 4, 5], "index")); // 0
+// console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "value")); // 230
+// console.log(smallestValue([750, 50000, 10, 50], "value")); // 10
+// console.log(smallestValue([500, 250, 750, 5000, 1000, 230], "index")); // 5
+// console.log(smallestValue([1, 2, 3, 4, 5], "value")); // 1
+// console.log(smallestValue([1, 2, 3, 4, 5], "index")); // 0
+
+//14. Find the mean (average) of a list of numbers in an array.
+function findAverage(array) {
+  return array.reduce((acc, curr) => acc + curr) / array.length;
+}
+
+// console.log(findAverage([1, 3, 5, 7])); //4
+
+//15.  Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+/*
+Input and output arrays
+A:
+
+*/
+
+function sortByLength(array) {
+  // Return an array containing the same strings,
+  // ordered from shortest to longest
+  return [];
+}
+
+console.log(sortByLength(["Beg", "Life", "I", "To"]));
