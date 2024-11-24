@@ -21,7 +21,7 @@ function disemvowel(str) {
     .join("");
 }
 
-console.log(disemvowel("This website is for losers LOL!"));
+// console.log(disemvowel("This website is for losers LOL!"));
 
 //2.  Repeat strings
 //convert string to an array with split
@@ -51,5 +51,49 @@ function accum(str) {
     .map((el, idx) => el.toUpperCase() + el.toLowerCase().repeat(idx))
     .join("-");
 }
-console.log(accum("abcd"));
-console.log(accum("ZpglnRxqenU"));
+// console.log(accum("abcd"));
+// console.log(accum("ZpglnRxqenU"));
+
+//3.  given a string of space separated numbers, and have to return the highest and lowest number.
+
+// function highAndLow(numbers) {
+//   let numsArray = numbers
+//     .split(" ")
+//     .map((el) => Number(el))
+//     .sort((a, b) => b - a);
+//   let high = String(numsArray[numsArray.length - 1]);
+//   let low = String(numsArray[0]);
+//   return `${low} ${high}`;
+// }
+
+function highAndLow(numbers) {
+  numbers = numbers.split(" ");
+  return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
+}
+
+// console.log(highAndLow("1 2 3 4 5")); // return "5 1"
+// console.log(highAndLow("1 2 -3 4 5")); // return "5 -3"
+// console.log(highAndLow("1 9 3 4 -5")); // return "9 -5"
+
+//4.  Return first letter of a string
+// function makeString(str) {
+//   let result = "";
+//   str.split(" ").map((word) => (result += word[0]));
+//   return result;
+// }
+
+function makeString(str) {
+  return str
+    .split(" ")
+    .map((word) => word.slice(0, 1))
+    .join("");
+}
+
+// console.log(makeString("This Is A Test"));
+
+function removeExclamationMarks(str) {
+  return str.replace(/!/g, "");
+}
+
+// console.log(removeExclamationMarks("Hello World!"));
+// console.log(removeExclamationMarks("He!o Woowoo"));
