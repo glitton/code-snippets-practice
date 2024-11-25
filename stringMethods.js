@@ -97,3 +97,18 @@ function removeExclamationMarks(str) {
 
 // console.log(removeExclamationMarks("Hello World!"));
 // console.log(removeExclamationMarks("He!o Woowoo"));
+
+//4.  Given a string of words, return the length of the shortest word(s).
+
+// function findShort(str) {
+//   return str
+//     .split(" ")
+//     .map((word) => word.length)
+//     .sort((a, b) => a - b)[0];
+// }
+
+function findShort(str) {
+  return Math.min(...str.split(" ").map((el) => el.length));
+}
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps")); // 3

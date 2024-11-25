@@ -300,4 +300,13 @@ function squareDigits(num) {
   return Number(result);
 }
 
-console.log(squareDigits(3212)); //9414
+// console.log(squareDigits(3212)); //9414
+
+//18. Write a function which takes a list of strings and returns each line prepended by the correct number.The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+function number(arr) {
+  return arr.map((el, idx) => `${idx + 1}: ${el}`);
+}
+
+console.log(number([])); //[], "Empty array should return empty array";
+console.log(number(["a", "b", "c"])); //["1: a", "2: b", "3: c"],
